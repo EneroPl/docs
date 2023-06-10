@@ -9,7 +9,7 @@
   - [**components/**](../directories/components.md)
   - [**entity/**](../directories/entity.md)
   - [**tests/**](../directories/tests.md)
-- [Файлы](README.md)
+Файлы
   - [**Component**](component.md)
   - [**API**](api.md)
   - [**Entity**](entity.md)
