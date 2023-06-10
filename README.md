@@ -40,3 +40,8 @@
 - Отзывчивость при написании тестов или эмуляции сервера (моки);
 - Огранизованный\Структурированный\Читабельный код;
 - и так далее...
+
+## Полезные ссылки
+
+- [Moving away from ReactJs and VueJs on front-end using Clean Architecture](https://dev.to/xurxodev/moving-away-from-reactjs-and-vuejs-on-front-end-using-clean-architecture-3olk)
+- [Заблуждения Clean Architecture](https://habr.com/ru/companies/mobileup/articles/335382/)

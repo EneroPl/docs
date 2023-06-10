@@ -3,65 +3,30 @@
 ## **Содержание**
 
 - [Главная](README.md)
-- [Структура модуля](directories/README.md)
-  - [**assets/**](directories/assets.md)
-  - [**helpers/**](directories/helpers.md)
-  - [**components/**](directories/components.md)
-  - [**entity/**](directories/entity.md)
-  - [**tests/**](directories/tests.md)
-- [Файлы](files/README.md)
-  - [**Component**](files/component.md)
-  - [**API**](files/api.md)
-  - [**Entity**](files/entity.md)
-  - [**Tests**](files/tests.md)
-  - [**Service**](files/service.md)
-  - [**Interfaces**](files/interfaces.md)
-  - [**Store**](files/store.md)
+- [Структура модуля](../directories/README.md)
+  - [**assets/**](../directories/assets.md)
+  - [**helpers/**](../directories/helpers.md)
+  - [**components/**](../directories/components.md)
+  - [**entity/**](../directories/entity.md)
+  - [**tests/**](../directories/tests.md)
+- [Файлы](README.md)
+  - [**Component**](component.md)
+  - [**API**](api.md)
+  - [**Entity**](entity.md)
+  - [**Tests**](tests.md)
+  - [**Service**](service.md)
+  - [**Interfaces**](interfaces.md)
+  - [**Store**](store.md)
 
 #
 
-Компонент реализует слой отображения и отвечает за то, как ему отобразить данные и никакой бизнес-логики.
+Компонент реализует слой отображения, а это значит, что состояние и хранение промежуточных данных возложено на этот слой.
 
 ## **Зона ответственности**
 
-Проще говоря, компонент получает входные данные от бизнес-логики и форматирует их под необходимый для себя формат отображения. Например, у нас есть таблица, которая получает массив данных, где есть свойство `createdAt` типа `number` - timestamp, который мы форматируем в таблице и приводим к нужному формату отображения.
+Компонент является источником данных, определяющее состояние и промежуточные данные, необходимые текущему или дочерним компонентам. Помимо определения локальных состояний, компонент может забрашивать данные от адаптера и также сохраняя в своё состояние.
 
-
-
-```
-**!НЕПРАВИЛЬНО!**
-// service.ts
-...
-getTableData(): Collection[] {
-  return this.api.getTableData().then(res => {
-    return res.map(item => ({
-      ...item,
-      createdAt: moment.unix(item.createdAt).format("DD/MM/YYYY")
-    }))
-  })
-}
-```
-
-```
-**!ОХУЕННО!**
-// Table.vue
-...
-const props = defineProps({
-  data: {
-    type: Array,
-    default: () => []
-  }
-})
-
-const filteredData = computed(() => {
-  return props.data.map(item => ({
-    ...item,
-    createdAt: moment.unix(item.createdAt).format("DD/MM/YYYY")
-  }))
-})
-```
-
-Грубо говоря, если вы используете слой отображения, то вся необходимая часть по форматированию данных должны оставаться за компонентом.
+Также, при наличии глобального хранилища у адаптера, компонент может устанавливать и/или получать информацию через адаптер. Но, стоит отметить, что данные, хранящиеся в глобальном хранилище, должны обосновано располагаться там.
 
 ## **Определение констант**
 

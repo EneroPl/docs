@@ -2,21 +2,21 @@
 
 ## **Содержание**
 
-- [Главная](README.md)
-- [Структура модуля](directories/README.md)
-  - [**assets/**](directories/assets.md)
-  - [**helpers/**](directories/helpers.md)
-  - [**components/**](directories/components.md)
-  - [**entity/**](directories/entity.md)
-  - [**tests/**](directories/tests.md)
-- [Файлы](files/README.md)
-  - [**Component**](files/component.md)
-  - [**API**](files/api.md)
-  - [**Entity**](files/entity.md)
-  - [**Tests**](files/tests.md)
-  - [**Service**](files/service.md)
-  - [**Interfaces**](files/interfaces.md)
-  - [**Store**](files/store.md)
+- [Главная](../README.md)
+- [Структура модуля](README.md)
+  - [**assets/**](assets.md)
+  - [**helpers/**](helpers.md)
+  - [**components/**](components.md)
+  - [**entity/**](entity.md)
+  - [**tests/**](tests.md)
+- [Файлы](../files/README.md)
+  - [**Component**](../files/component.md)
+  - [**API**](../files/api.md)
+  - [**Entity**](../files/entity.md)
+  - [**Tests**](../files/tests.md)
+  - [**Service**](../files/service.md)
+  - [**Interfaces**](../files/interfaces.md)
+  - [**Store**](../files/store.md)
 
 #
 

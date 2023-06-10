@@ -3,24 +3,24 @@
 ## **Содержание**
 
 - [Главная](README.md)
-- [Структура модуля](directories/README.md)
-  - [**assets/**](directories/assets.md)
-  - [**helpers/**](directories/helpers.md)
-  - [**components/**](directories/components.md)
-  - [**entity/**](directories/entity.md)
-  - [**tests/**](directories/tests.md)
-- [Файлы](files/README.md)
-  - [**Component**](files/component.md)
-  - [**API**](files/api.md)
-  - [**Entity**](files/entity.md)
-  - [**Tests**](files/tests.md)
-  - [**Service**](files/service.md)
-  - [**Interfaces**](files/interfaces.md)
-  - [**Store**](files/store.md)
+- [Структура модуля](../directories/README.md)
+  - [**assets/**](../directories/assets.md)
+  - [**helpers/**](../directories/helpers.md)
+  - [**components/**](../directories/components.md)
+  - [**entity/**](../directories/entity.md)
+  - [**tests/**](../directories/tests.md)
+- [Файлы](README.md)
+  - [**Component**](component.md)
+  - [**API**](api.md)
+  - [**Entity**](entity.md)
+  - [**Tests**](tests.md)
+  - [**Service**](service.md)
+  - [**Interfaces**](interfaces.md)
+  - [**Store**](store.md)
 
 #
 
-Эта штуку называют по разному - *Gateway*, *Repository* или ещё как-нибудь. Во всяком случае, суть одна - это набор методов, реализующие запросы к серверу и возвращту ответа. Ответ, полученный от сервера **распаковывется** и возвращается в виде набора данных, необходимых для реализации модуля.
+Эта штуку называют по разному - *Gateway*, *Repository* или ещё как-нибудь. Во всяком случае, суть одна - это набор методов, реализующие запросы к серверу и возврату ответа сервера, распакованного в виде набора данных, необходимых модулю.
 
 ## **Инициализация API**
 
@@ -31,7 +31,7 @@ import axios from 'axios';
 
 export const authApi: IAuthApi = {
   async login(params: TAuthLogin): Promise<TAuthTokens> {
-    return await axios.get('/api/login')
+    return axios.get('/api/login')
       .then(({ data: response }) => {
         return response.data;
       })
@@ -95,3 +95,10 @@ export const authApi: IAuthApi = {
 ```
 
 В данном случае `API` имеет внутренний метод типа `() => void`, который необходим для отмены асинхронного запроса.
+
+## **Заключение**
+
+1. Экспорт файла осуществляется через `named export`;
+2. Абсолютно важно, чтобы типизация в этом слое появилась как можно раньше и не потерялась;
+3. Данные, полученные с сервера, **должны** быть распакованы. Результат выполнения метода соответсвует необходимым данным для бизнес-логики;
+4. Допускается описывать API's методы "вспомогательными инструментами", которые отражены в этом документе.
