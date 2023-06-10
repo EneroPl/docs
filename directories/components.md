@@ -1,22 +1,40 @@
 # **Директория `components/`**
 
+## **Содержание**
+
+- [Главная](README.md)
+- [Структура модуля](directories/README.md)
+  - [**assets/**](directories/assets.md)
+  - [**helpers/**](directories/helpers.md)
+  - [**components/**](directories/components.md)
+  - [**entity/**](directories/entity.md)
+  - [**tests/**](directories/tests.md)
+- [Файлы](files/README.md)
+  - [**Component**](files/component.md)
+  - [**API**](files/api.md)
+  - [**Entity**](files/entity.md)
+  - [**Tests**](files/tests.md)
+  - [**Service**](files/service.md)
+  - [**Interfaces**](files/interfaces.md)
+  - [**Store**](files/store.md)
+
+#
+
 Хранилище компонентов, которые необходимы для реализации текущего модуля.
 
 ```yml
 - modules/
     - %module_name%/
         - components/
-            - modals/
-            - common/
             - Items/
                 - Item.vue
                 - index.vue
             - MyComponent.vue
 ```
 
-Требования по использованию директории:
+Соглашения по работе с директорией:
 
-1. Название директорий **должно** быть в формате `camelCase`, если внутри нет компонента `index.vue`, иначе только с **Б**ольшой буквы:
+1. Название директорий **должно** быть в формате `camelCase`, если внутри нет компонента `index.vue`, иначе `PascalCase`.
 
 ```yml
 - components/
@@ -35,21 +53,19 @@
 // Плохо
 - components/
     - MyComponent.vue
-    - ItemsCollection.vue
+    - ItemCollection.vue
     - Item.vue
 
 // Хорошо
 - components/
-    - ItemsCollection/
+    - ItemCollection/
         - index.vue
         - Item.vue
     - MyComponent.vue
 ```
 
 >
-    UPD: Таким образом при изучении структуры модуля, становятся понятным,
-    какие компоненты необходимы для реализации какого-либо сложного компонента,
-    разбитого на несколько частей.
+    UPD: Так становится понятна структура, из которой состоит какой-либо компонент, разбитый на несколько компонентов.
 >
 
 3. Если компонент реализует модальное окно, то **должен** храниться в директории `modals/`:
