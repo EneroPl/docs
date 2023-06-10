@@ -2,14 +2,14 @@
 
 ## **Содержание**
 
-- [Главная](README.md)
+- [Главная](../README.md)
 - [Структура модуля](../directories/README.md)
   - [**assets/**](../directories/assets.md)
   - [**helpers/**](../directories/helpers.md)
   - [**components/**](../directories/components.md)
   - [**entity/**](../directories/entity.md)
   - [**tests/**](../directories/tests.md)
-Файлы
+- Файлы
   - [**Component**](component.md)
   - [**API**](api.md)
   - [**Entity**](entity.md)
