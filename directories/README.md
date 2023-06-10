@@ -1,5 +1,25 @@
 # **Структура модуля**
 
+## **Содержание**
+
+- [Главная](../README.md)
+- [Структура модуля](README.md)
+  - [**assets/**](assets.md)
+  - [**helpers/**](helpers.md)
+  - [**components/**](components.md)
+  - [**entity/**](entity.md)
+  - [**tests/**](tests.md)
+- [Файлы](../files/README.md)
+  - [**Component**](../files/component.md)
+  - [**API**](../files/api.md)
+  - [**Entity**](../files/entity.md)
+  - [**Tests**](../files/tests.md)
+  - [**Service**](../files/service.md)
+  - [**Interfaces**](../files/interfaces.md)
+  - [**Store**](../files/store.md)
+
+#
+
 Структура проекта подразумевает разбиение каждой страницы на отдельный модуль, хранящий в себе исключительно необходимые данные для существования. Ниже представлен пример модуля с минимальным набором файлов и папочек.
 
 ```yml 
