@@ -10,6 +10,7 @@
 - [**Сущности (entity)**](entity.md)
 - [**Абстракции (interfaces)**](interfaces.md)
 - [**Адаптер (service)**](service.md)
+- [**Репозиторий (API)**](api.md)
 - [**Глобальное хранилище**](store.md)
 
 #
