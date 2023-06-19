@@ -1,6 +1,6 @@
 # **Clean Architecture (а-ля Модульный подход)**
 
-# Содержание
+# **Содержание**
 
 - [**Файловая структура модуля**](steps/structure.md)
   - [**assets/**](steps/assets.md)

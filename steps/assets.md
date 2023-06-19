@@ -1,5 +1,19 @@
 # Директория **assets/**
 
+# **Содержание**
+
+- [**Файловая структура модуля**](structure.md)
+  - [**assets/**](assets.md)
+  - [**helpers/**](helpers.md)
+  - [**tests/**](tests.md)
+  - [**Слой отображения (components/)**](component.md)
+- [**Сущности (entity)**](entity.md)
+- [**Абстракции (interfaces)**](interfaces.md)
+- [**Адаптер (service)**](service.md)
+- [**Глобальное хранилище**](store.md)
+
+#
+
 Директория для хранения изображения, стилей и любой другой статики. Пример:
 
 ```yml
