@@ -1,5 +1,19 @@
 # **Clean Architecture (а-ля Модульный подход)**
 
+# Содержание
+
+- [**Файловая структура модуля**](steps/structure.md)
+  - [**assets/**](steps/assets.md)
+  - [**helpers/**](steps/helpers.md)
+  - [**tests/**](steps/tests.md)
+  - [**Слой отображения (components/)**](steps/component.md)
+- [**Сущности (entity)**](steps/entity.md)
+- [**Абстракции (interfaces)**](steps/interfaces.md)
+- [**Адаптер (service)**](steps/service.md)
+- [**Глобальное хранилище**](steps/store.md)
+
+#
+
 ## **Предисловие**
 
 Это руководство было написано в стиле *"своими словами"* и пытается более менее понятным языком описать концепцию и идеалы, к которому мы стремимся.
