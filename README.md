@@ -1,24 +1,10 @@
 # **Clean Architecture (а-ля Модульный подход)**
 
-## **Содержание**
+## **Предисловие**
 
-- [Главная](README.md)
-- [Структура модуля](directories/README.md)
-  - [**assets/**](directories/assets.md)
-  - [**helpers/**](directories/helpers.md)
-  - [**components/**](directories/components.md)
-  - [**entity/**](directories/entity.md)
-  - [**tests/**](directories/tests.md)
-- Файлы
-  - [**Component**](files/component.md)
-  - [**API**](files/api.md)
-  - [**Entity**](files/entity.md)
-  - [**Tests**](files/tests.md)
-  - [**Service**](files/service.md)
-  - [**Interfaces**](files/interfaces.md)
-  - [**Store**](files/store.md)
+Это руководство было написано в стиле *"своими словами"* и пытается более менее понятным языком описать концепцию и идеалы, к которому мы стремимся.
 
-#
+Если у вас появилась идея дополнить, отредактировать руководство, то согласуйте это с её автором или командой разработчиков.
 
 ## **Проблема**
 
